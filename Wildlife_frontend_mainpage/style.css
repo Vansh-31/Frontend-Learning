@@ -2,16 +2,131 @@
     padding: 0;
     margin: 0;
 }
-body
-{
-    background: url(https://source.unsplash.com/random/?Wildlife/);
-    background-size: 100vw;
-    background-repeat: no-repeat;
-}
+html { 
+    background: linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url(https://source.unsplash.com/random/?Wildlife/) no-repeat center center fixed; 
+    background-size: cover;
+  }
 #logo{
     display: inline-block;
-    width: 20vw;
+    width: 13vw;
+    margin-left: 20px;
 }
 #logo a img{
+    width: 90%;
+}
+.nav-bar{
+    display: flex;
+    overflow: hidden;
+    background-color: white;
+    width: 94vw;
+    height: 5.4vw;
+    margin: 2.1vw auto;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 8px 9px 8px rgba(0, 0, 0,0.6);
+}
+.nav-bar > a{
+    padding: 2.7vw 1.6vw;
+    text-decoration: none;
+    color: #864826;
+    font-size: 1.3vw;
+}
+.nav-bar > a:hover{
+    background-color: rgb(185, 185, 185);
+}
+#search-bar{
+    width: 13vw;
+    font-size: 1.4vw;
+}
+#search-btn{
+    cursor: pointer;
+    font-size: 2.6vw;
+    background: none;
+    border: none;
+    padding: 2.8vw 2.1vw;
+    background-color: #76b801;
+}
+#search-btn:active{
+    transform: translateY(5px);
+
+}
+section{
+    margin: 10vh;
+    display: inline-block;
+    color: white;
+    font-size: 2.1vw;
+    text-align: center;
+    vertical-align: middle;
+}
+#donate-btn{
+    padding: 1vw;
+    background-color: #76b801;
+    margin: 4vh;
+    font-size: 3vw;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 10px 10px 10px black;
+}
+#donate-btn:hover{
+    cursor: pointer;
+    
+}
+#donate-btn:active{
+    box-shadow: 0 5px #666;
+    transform: translateY(6px);
+}
+#footer{
+    font-size: larger;
+    color: white;
+    position: absolute;
+    bottom: 0%;
     width: 100%;
+    text-align: center;
+}
+@media only screen and (max-width:600px)
+{
+    #logo{
+        display: inline-block;
+        width: 40vw;
+        margin-left: 20px;
+    }
+    .nav-bar{
+        margin: 0px;
+        flex-direction: column;
+        width: 100vw;
+        height: auto;
+    }   
+    .nav-bar > a{
+        display: block;
+        font-size: 6vw;
+        padding: 2vh 2vw;
+    }   
+    .nav-bar > a:hover{
+        background-color: white;
+        text-decoration: underline;
+        
+    }
+    #search-bar{
+        top: 58vh;
+        left: 2vw;
+        display: inline;
+        width: 100vw;
+        height: 5vh;
+        font-size: 3.4vw;
+        margin-right: 0px;
+    }
+    #search-btn{
+        display: inline-block;
+        width: 100%;
+        font-size: 3vh;
+    }
+    section{
+        font-size: 3vh;
+    }
+    #donate-btn{
+        font-size: 3vh;
+    }
+    #footer{
+        display: none;
+    }
 }
