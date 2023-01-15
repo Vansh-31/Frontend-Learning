@@ -13,18 +13,21 @@ const update_img = (url, name) => {
 		biweekly: "../images/leetcode.png",
 		round: "../images/kickstart.jpeg",
 		kickstart: "../images/kickstart.jpeg",
+		"kick start": "../images/kickstart.jpeg",
 	};
 	name = name.split(" ");
 	for (let index = 0; index < name.length; index++) {
 		name[index] = name[index].toLowerCase();
 	}
+	changed = false;
 	for (const word of name) {
 		if (word in famous_platforms) {
+			changed = true;
 			url = famous_platforms[word];
 			break;
 		}
 	}
-	return url;
+	return [url, changed];
 };
 let imgs;
 fetch(
@@ -53,15 +56,15 @@ fetch("https://kontests.net/api/v1/all")
 				imgs[Math.round(Math.random() * 9)].urls.small,
 				title
 			);
-
-			ihtml += `<div class="card">
-        <img src="${img_url}" alt="">
-        <h5 class="card-title">${title}</h5>
-        <p class="card-text"><a href="${url}">Visit here</a></p>
-        <p class="card-text">Starts on : ${start_date_time}</p>
-        <p class="card-text">Ends on : ${end_date_time}</p>
-    </div>`;
-			console.log(start_date_time);
+			if (img_url[1]) {
+				ihtml += `<div class="card">
+                <img src="${img_url[0]}" alt="">
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text"><a href="${url}">Visit here</a></p>
+                <p class="card-text">Starts on : ${start_date_time}</p>
+                <p class="card-text">Ends on : ${end_date_time}</p>
+                </div>`;
+			}
 		}
 		container.innerHTML += ihtml;
 	});
