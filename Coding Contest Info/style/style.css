@@ -5,7 +5,7 @@
 }
 .nav-bar{
     display: flex;
-    background-color: rgb(207, 202, 202);
+    background-color: rgb(25, 163, 218);
     height: 6vw;
     align-items: center;
     overflow: hidden;
@@ -23,7 +23,7 @@
 }
 .nav-items{
     display: flex;
-    background-color: rgb(207, 202, 202);
+    background-color: rgb(25, 163, 218);
     height: 100%;
     width: 100%;
     align-items: center;
@@ -39,7 +39,7 @@
 }
 .nav-items > a:hover{
     text-decoration: underline;
-    color:rgb(122, 32, 240);
+    color:rgb(251, 255, 0);
 }
 #Search input[type="text"]{
     font-size: 1.5vw;
@@ -58,18 +58,20 @@
     display: flex;
     flex-wrap: wrap;
     margin: 3vw;
-    background-color: rgb(168, 167, 167);
     align-items: center;
+    border-radius: 10px;
 }
 .card{
-    border: 2px solid red;
     margin: 1vw;
-    width: 30%;
+    width: 29%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 0px;
+    padding: 20px 8px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 20px;
+    box-shadow: 10px 10px gray;
 }
 .card > img{
     display: flex;

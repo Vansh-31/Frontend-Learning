@@ -1,8 +1,24 @@
 console.time("St");
 const Format_date_time = (date_time) => {
 	date_time = date_time.substr(0, date_time.length - 5);
-	date_time = date_time.replace("T", " at ");
-	return date_time;
+	date = date_time.substr(0, 10);
+	time = date_time.substr(11);
+	hrs = parseInt(time.substr(0, 2));
+	mins = parseInt(time.substr(3, 5));
+	if (mins + 30 >= 60) {
+		hrs++;
+	}
+	hrs = String(((hrs+5)%24))
+	mins = String(((mins+30)%60))
+	if (hrs.length<2)
+	{
+		hrs = "0" + hrs
+	}
+	if (mins.length<2)
+	{
+		mins = "0" + mins
+	}
+	return (`${date} at ${hrs}:${mins}`)
 };
 const update_img = (url, name) => {
 	famous_platforms = {
