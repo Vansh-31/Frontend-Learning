@@ -60,6 +60,7 @@
 	margin: 3vw;
 	align-items: center;
 	border-radius: 10px;
+	justify-content: center;
 }
 .card {
 	margin: 1vw;
